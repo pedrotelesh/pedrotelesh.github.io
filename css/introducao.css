@@ -26,6 +26,22 @@
     color: #525252;
 }
 
+.botao-principal {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #141414;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao-principal:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 1000px) {
     .introducao h1 {
         font-size: 3rem;
