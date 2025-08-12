@@ -14,7 +14,7 @@
     color: #141414;
 }
 
-.empresa {
+.empresa-impar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
@@ -25,7 +25,7 @@
     gap: 10px 20px;
 }
 
-.empresa::before {
+.empresa-impar::before {
     content: "";
     display: block;
     width: 4px;
@@ -35,7 +35,7 @@
     top: 20px;
 }
 
-.empresa-ano {
+.empresa-impar-ano {
     position: absolute;
     top: 22px;
     left: -100px;
@@ -45,30 +45,90 @@
     width: 80px;
 }
 
-.empresa-titulo {
+.empresa-impar-titulo {
     font-size: 1.125rem;
     line-height: 1.1;
     font-weight: bold;
 }
 
-.empresa-texto {
+.empresa-impar-texto {
     font-size: .875rem;
     color: #525252;
     line-height: 1.4;
 }
 
-.empresa-habilidades {
+.empresa-impar-habilidades {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-content: start;
 }
 
-.empresa-habilidades li {
+.empresa-impar-habilidades li {
     font-size: .875rem;
     line-height: 1.4;
     border-radius: 4px;
     background: #fff;
+    padding: 5px 10px;
+}
+
+.empresa-par {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    background: #000000;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+    gap: 10px 20px;
+}
+
+.empresa-par::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#b6f829, #67dd0a);
+    position: absolute;
+    top: 20px;
+}
+
+.empresa-par-ano {
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    color: #525252;
+    font-size: .875rem;
+    text-align: right;
+    width: 80px;
+}
+
+.empresa-par-titulo {
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.empresa-par-texto {
+    font-size: .875rem;
+    color: #f5f5f5;
+    line-height: 1.4;
+}
+
+.empresa-par-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: start;
+}
+
+.empresa-par-habilidades li {
+    font-size: .875rem;
+    line-height: 1.4;
+    border-radius: 4px;
+    color: #f5f5f5;
+    background: #3f3f3f;
     padding: 5px 10px;
 }
 
@@ -83,13 +143,25 @@
     .experiencia-texto {
         font-size: 1.25rem;
     }
-    .empresa-ano {
+    .empresa-impar-ano {
         position: initial;
         order: 1;
         width: initial;
         text-align: start;
     }
-    .empresa-ano::before {
+    .empresa-impar-ano::before {
+        content: "Ano:";
+        color: #141414;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    .empresa-par-ano {
+        position: initial;
+        order: 1;
+        width: initial;
+        text-align: start;
+    }
+    .empresa-par-ano::before {
         content: "Ano:";
         color: #141414;
         font-weight: bold;
@@ -98,7 +170,10 @@
 }
 
 @media (max-width: 468px) {
-    .empresa {
+    .empresa-impar {
+        grid-template-columns: 1fr;
+    }
+    .empresa-par {
         grid-template-columns: 1fr;
     }
 }
