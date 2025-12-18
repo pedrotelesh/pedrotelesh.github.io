@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
-    align-items: center;
+    align-items: start;
 }
 
 .footer-texto {
@@ -28,6 +28,12 @@
 
 .footer-contato li a {
     text-decoration: underline;
+}
+
+.footer-contato img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
 }
 
 .footer-copy {
