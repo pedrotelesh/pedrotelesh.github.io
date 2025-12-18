@@ -132,7 +132,17 @@
     padding: 5px 10px;
 }
 
+.ano-separator {
+    display: block;
+}
+
 @media (max-width: 768px) {
+    .ano-separator {
+        display: inline;
+    }
+    .ano-separator::before {
+        content: " - ";
+    }
     .experiencia {
         grid-template-columns: 1fr;
         gap: 40px;

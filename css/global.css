@@ -2,10 +2,42 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Wittgenstein';
+    src: url('../font/Wittgenstein.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../font/FiraSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     font-family: "Fira Sans", Arial, sans-serif;
     color: #141414;
+}
+
+h1, h2, h3, strong, b,
+.empresa-impar-titulo,
+.empresa-par-titulo,
+.projetos-nome,
+.formacao-nome,
+.cargo-titulo,
+.projetos-linguagem,
+.footer-contato li,
+.empresa-impar-ano::before,
+.empresa-par-ano::before,
+.marcas-lista p {
+    font-family: 'Wittgenstein', serif;
 }
 
 h1, h2, h3, p {
@@ -53,5 +85,9 @@ a {
         line-height: 1;
         text-transform: capitalize;
         max-width: initial !important;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
