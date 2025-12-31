@@ -186,9 +186,12 @@
                 <li><a href="mailto:pedroteles3027@gmail.com">pedroteles3027@gmail.com</a></li>
                 <li><a href="https://www.linkedin.com/in/pedrotelesh" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a></li>
             </ul>
-            <p class="footer-copy">© Copyright 2025 Pedro Teles. Todos os direitos reservados.</p>
+            <p class="footer-copy">© Copyright <span id="ano-atual"></span> Pedro Teles. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('ano-atual').innerText = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
