@@ -52,6 +52,10 @@
     flex-direction: column;
 }
 
+.formacao-item.anhanguera {
+    flex: 1 1 100%;
+}
+
 .formacao-nome {
     font-size: .875rem;
     text-transform: uppercase;
